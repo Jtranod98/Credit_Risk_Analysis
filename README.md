@@ -2,36 +2,75 @@
 
 # Overview:
 
-The purpose of this excercise is to use different machine learning models to make a loan prediction risk analysis. Evaluate the performance of six different sampling models: RandomOverSampler, SMOTE, clusterCentroids, MOTEENN, BalancedRandomForestClassifier, EasyEnsembleClassifier. Then, recommend whether they should be used to predict credit risk.
+The purpose of this excercise is to utilize different machine learning models to make a prediction on loans risk analysis. Evaluate the performance of six different sampling models: RandomOverSampler, SMOTE, clusterCentroids, MOTEENN, BalancedRandomForestClassifier, EasyEnsembleClassifier. Then, recommend whether they should be used to predict credit risk.
 
 # Results: 
-
-There is a bulleted list that describes the balanced accuracy score and the precision and recall scores of all six machine learning models (15 pt)
-Use screenshots of your outputs to support your results.
-
-
-  1. RandomOverSampler:
-  2. SMOTE:
-  3. clusterCentroids:
-  4. MOTEENN:
-  5. BalancedRandomForestClassifier:
-  6. EasyEnsembleClassifier
   
-
-
-# Summary: 
-There is a summary of the results (2 pt)
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. 
-
-  - The summary table shows that the balanced accuracy scores ranges from 0.54 to 0.93.  ClusterCentroids method has the lowest score of 0.54 and EasyEnsembleClassifier has the highest score of 0.93.  Since EasyEnsembleClassifier has highest accuracy score, it also means that it has the higest percentage of predictions that are correct. 
+   ![random_os.png](images/random_os.png)
+ 1. RandomOverSampler:
   
-  - The precision scores of low risk loans are the same in all all sampling methods(RandomOverSampler, SMOTE,clusterCentroids, MOTEENN),score of 1.  This means all methods are able to predict low risk loans equally.
+      - balanced accuracy score: 0.6438627638488825
+      - precision score high risk loans: 0.01
+      - precision score low risk loans: 1.00
+      - recall score high risk loans: 0.69
+      - recall score low risk loans: 0.59
   
-  - The precision scores of high risk loans are equal, 0.01, for all four resampling methods.  However the two ensemble methods (BalancedRandomForestClassifier, EasyEnsembleClassifier) have are higher scores 0.03 and 0.09, respectively.  This means the resampling methods are able to predict high risk loans better than the ensemble methods, 99% correct vs. 97%, and 91%.
+    ![smote.png](images/smote.png)
+  2. SMOTE:  
   
-  - The recall scores are less consistence between methods.  In the high risk loans the scores ranges between 0.63 to 0.92.  SMOTE has the lowest score of 0.63 and EasyEnsembleClassifier has the highest score of 0.92.  Which means 92% were correctly predicted .
-  In the low risk loans ranges between 0.59 to 0.94. Again, EasyEnsembleClassifier has the highest score of 0.94.
+      - balanced accuracy score: 0.6628910844779521
+      - precision score high risk loans: 0.01
+      - precision score low risk loans: 1.00
+      - recall score high risk loans: 0.63
+      - recall score low risk loans: 0.69
    
-  - Ensemble classifiers methods have lower precision but higher recall at the high risk loans the random methods were better. at 99.09 vs. .03 and .93 for BalancedRandomForestClassifier and EasyEnsembleClassifier respectively.
+     ![cluster.png](images/cluster.png)
+  3. clusterCentroids: 
+  
+      - balanced accuracy score: 0.5447339051023905
+      - precision score high risk loans: 0.01
+      - precision score low risk loans: 1.00
+      - recall score high risk loans: 0.69
+      - recall score low risk loans: 0.40
+   
+      ![smoteenn.png](images/smoteenn.png)
+  4. MOTEENN:
+  
+      - balanced accuracy score: 0.6748328802711889
+      - precision score high risk loans: 0.01
+      - precision score low risk loans: 1.00
+      - recall score high risk loans: 0.76
+      - recall score low risk loans: 0.59
 
-  - I recommend using the EasyEnsembleClassifier, due to the fact that it has a very high accuracy scores and recall scores; 93% correctly predicted all the loan, 92% at predicting correctly high risk loan and 94% at predicting low risk loans. 
+     ![balance_rf.png](images/balance_rf.png)
+  5. BalancedRandomForestClassifier:
+  
+      - balanced accuracy score: 0.7885466545953005
+      - precision score high risk loans: 0.03
+      - precision score low risk loans: 1.00
+      - recall score high risk loans: 0.70
+      - recall score low risk loans: 0.87
+
+   ![easy_ensemble.png](images/easy_ensemble.png)
+   
+  6. EasyEnsembleClassifier:
+  
+      - balanced accuracy score: 0.9316600714093861
+      - precision score high risk loans: 0.09
+      - precision score low risk loans: 1.00
+      - recall score high risk loans: 0.92
+      - recall score low risk loans: 0.94
+ 
+# Summary: 
+
+  ![scores_table.png](images/scores_table.png)
+
+  - From the summary table, the balanced accuracy scores ranges from 0.54 to 0.93.  ClusterCentroids method has the lowest score and EasyEnsembleClassifier has the highest score.  Since EasyEnsembleClassifier has highest accuracy score, this also means that it has the higest percentage of correct predictions. 
+  
+  - The precision scores of low risk loans are the same in all six sampling methods, score of 1.  This means all methods can predict low risk loans at the same precision.
+  
+  - The precision scores of high risk loans are the same, 0.01, for all four resampling methods, RandomOverSampler, SMOTE, ClusterCentroids, and SMOTEENN.  However, the two ensemble methods, BalancedRandomForestClassifier and EasyEnsembleClassifier, have higher scores 0.03 and 0.09, respectively.  Since the best value is 1 and the worst value is 0, EasyEnsembleClassifier in this case is the best method.
+  
+  - The recall scores are less consistence between methods.  In The high risk loans, the scores range between 0.63 to 0.92.  SMOTE has the lowest score of 0.63 and EasyEnsembleClassifier has the highest score of 0.92.  In the low risk loans, the scores range between 0.40 to 0.94, EasyEnsembleClassifier has the highest score of 0.94. Again, the best value is 1 and the worst value is 0, EasyEnsembleClassifier in this case is the best method.
+   
+   - Based on the above evaluation, I recommend the EasyEnsembleClassifier for predicting loans risk, due to the fact that it has the highest accuracy scores, precision scores, and recall scores.
