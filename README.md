@@ -63,11 +63,10 @@ The purpose of this excercise is to utilize different machine learning models to
  
 # Summary: 
 
-  ![scores_table.png](images/scores_table.png)
 
   - From the summary table, the balanced accuracy scores ranges from 0.54 to 0.93.  ClusterCentroids method has the lowest score and EasyEnsembleClassifier has the highest score.  Since EasyEnsembleClassifier has highest accuracy score, this also means that it has the higest percentage of correct predictions. 
   
-  - The precision scores of low risk loans are the same in all six sampling methods, score of 1.  This means all methods can predict low risk loans at the same precision.
+  - The precision scores of low risk loans are the same in all six sampling methods, score of 1.  This means all methods can predict low risk loans with the same precision.
   
   - The precision scores of high risk loans are the same, 0.01, for all four resampling methods, RandomOverSampler, SMOTE, ClusterCentroids, and SMOTEENN.  However, the two ensemble methods, BalancedRandomForestClassifier and EasyEnsembleClassifier, have higher scores 0.03 and 0.09, respectively.  Since the best value is 1 and the worst value is 0, EasyEnsembleClassifier in this case is the best method.
   
