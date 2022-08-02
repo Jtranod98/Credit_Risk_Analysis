@@ -5,8 +5,7 @@
 The purpose of this excercise is to utilize different machine learning models to make a prediction on loans risk analysis. Evaluate the performance of six different sampling models: RandomOverSampler, SMOTE, clusterCentroids, MOTEENN, BalancedRandomForestClassifier, EasyEnsembleClassifier. Then, recommend whether they should be used to predict credit risk.
 
 # Results: 
-  
-   ![random_os.png](images/random_os.png)
+ 
  1. RandomOverSampler:
   
       - balanced accuracy score: 0.6438627638488825
@@ -15,7 +14,8 @@ The purpose of this excercise is to utilize different machine learning models to
       - recall score high risk loans: 0.69
       - recall score low risk loans: 0.59
   
-    ![smote.png](images/smote.png)
+     ![random_os.png](images/random_os.png)
+
   2. SMOTE:  
   
       - balanced accuracy score: 0.6628910844779521
@@ -24,7 +24,8 @@ The purpose of this excercise is to utilize different machine learning models to
       - recall score high risk loans: 0.63
       - recall score low risk loans: 0.69
    
-     ![cluster.png](images/cluster.png)
+     ![smote.png](images/smote.png)
+
   3. clusterCentroids: 
   
       - balanced accuracy score: 0.5447339051023905
@@ -33,7 +34,8 @@ The purpose of this excercise is to utilize different machine learning models to
       - recall score high risk loans: 0.69
       - recall score low risk loans: 0.40
    
-      ![smoteenn.png](images/smoteenn.png)
+     ![cluster.png](images/cluster.png)
+
   4. MOTEENN:
   
       - balanced accuracy score: 0.6748328802711889
@@ -42,7 +44,8 @@ The purpose of this excercise is to utilize different machine learning models to
       - recall score high risk loans: 0.76
       - recall score low risk loans: 0.59
 
-     ![balance_rf.png](images/balance_rf.png)
+      ![smoteenn.png](images/smoteenn.png)
+
   5. BalancedRandomForestClassifier:
   
       - balanced accuracy score: 0.7885466545953005
@@ -51,7 +54,7 @@ The purpose of this excercise is to utilize different machine learning models to
       - recall score high risk loans: 0.70
       - recall score low risk loans: 0.87
 
-   ![easy_ensemble.png](images/easy_ensemble.png)
+     ![balance_rf.png](images/balance_rf.png)
    
   6. EasyEnsembleClassifier:
   
@@ -60,10 +63,13 @@ The purpose of this excercise is to utilize different machine learning models to
       - precision score low risk loans: 1.00
       - recall score high risk loans: 0.92
       - recall score low risk loans: 0.94
- 
+      
+      ![easy_ensemble.png](images/easy_ensemble.png)
+  
 # Summary: 
 
-
+![scores_table.png](images/scores_table.png)
+    
   - From the summary table, the balanced accuracy scores ranges from 0.54 to 0.93.  ClusterCentroids method has the lowest score and EasyEnsembleClassifier has the highest score.  Since EasyEnsembleClassifier has highest accuracy score, this also means that it has the higest percentage of correct predictions. 
   
   - The precision scores of low risk loans are the same in all six sampling methods, score of 1.  This means all methods can predict low risk loans with the same precision.
